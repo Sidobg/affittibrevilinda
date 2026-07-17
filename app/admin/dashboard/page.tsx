@@ -53,6 +53,15 @@ export default function AdminDashboard() {
         <button onClick={logout} className="text-sm hover:opacity-70 transition" style={{color: '#8B6F4E'}}>Esci</button>
       </div>
       <div className="max-w-2xl mx-auto px-6 py-8">
+        <button
+          onClick={() => router.push('/admin/prezzi')}
+          className="w-full rounded-2xl px-5 py-4 mb-6 flex items-center justify-between transition"
+          style={{backgroundColor: '#8B6F4E', color: '#FDFAF4'}}
+        >
+          <span className="font-semibold text-sm tracking-wide">📅 Calendario dei prezzi</span>
+          <span className="text-sm opacity-80">Apri →</span>
+        </button>
+
         <p className="text-xs uppercase tracking-widest mb-5" style={{color: '#A08060'}}>I tuoi appartamenti</p>
         {cities.map(city => (
           <div key={city} className="mb-3">
